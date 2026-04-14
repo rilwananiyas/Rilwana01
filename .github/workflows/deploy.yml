@@ -13,10 +13,11 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
 
-      - name: setup node
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20 # Change this from 18 to 20
+          cache: 'npm'
 
       - name: install dependencies
         run: npm install
