@@ -1,6 +1,7 @@
 name: Deploy React + vite to github pages
 
 on:
+    workflow_distpatch:
   push:
     branches:
       - main
