@@ -1,10 +1,10 @@
 name: Deploy React + vite to github pages
 
 on:
-  workflow_dispatch: # Fixed the typo (removed the extra 't')
+  workflow_dispatch:
   push:
     branches:
-      - main # Fixed indentation (push should be aligned with workflow_dispatch)
+      - main
 
 jobs:
   build-deploy:
