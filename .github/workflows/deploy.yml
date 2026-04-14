@@ -1,10 +1,10 @@
 name: Deploy React + vite to github pages
 
 on:
-    workflow_distpatch:
-   push:
+  workflow_dispatch: # Fixed the typo (removed the extra 't')
+  push:
     branches:
-      - main
+      - main # Fixed indentation (push should be aligned with workflow_dispatch)
 
 jobs:
   build-deploy:
@@ -16,7 +16,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Change this from 18 to 20
+          node-version: 20 
           cache: 'npm'
 
       - name: install dependencies
@@ -29,4 +29,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist   
+          publish_dir: ./dist
